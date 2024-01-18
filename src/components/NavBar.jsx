@@ -20,11 +20,11 @@ function NavBar() {
               <li className="text-primary-200" id="product">
                 Product</li>
             </Link>
-            <Link to="/">
+            <Link to="/news">
               <li className="text-primary-200" id="news">
                 News</li>
             </Link>
-            <Link to="/">
+            <Link to="/contact-us">
               <li className="text-primary-200" id="contact">
                 Contact Us</li>
             </Link>

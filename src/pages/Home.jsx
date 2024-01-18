@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Fitur from "../components/Fitur";
-import Partner from "../components/Partner";
-import Partner2 from "../components/Partner2";
-import Review from "../components/Review";
-import Preview from "../components/Preview";
-import Cerita from "../components/Cerita";
+import Fitur from "../components/home/Fitur";
+import Partner from "../components/home/Partner";
+import Partner2 from "../components/home/Partner2";
+import Review from "../components/home/Review";
+import Preview from "../components/home/Preview";
+import Cerita from "../components/home/Cerita";
 
 function Home() {
   return (
@@ -25,15 +25,11 @@ function Home() {
         </div>
         <section className="flex flex-col items-center justify-center w-1/2">
           <h2
-            data-aos="fade-up"
-            data-aos-delay="500"
             className="pb-4 font-semibold text-center md:text-3xl lg:text-left xl:text-4xl"
           >
             Layanan Kesehatan Digital Terintegrasi untuk Indonesia Sehat
           </h2>
           <p
-            data-aos="fade-up"
-            data-aos-delay="750"
             className="text-lg text-justify xl:text-xl font-roboto"
           >
             Sebagai <i>platform SuperApp</i> kesehatan digital, FitAja! dibuat untuk

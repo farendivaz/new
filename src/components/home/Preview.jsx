@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "../styles/swiper.css";
-import "../index.css";
+import '../../styles/swiper.css';
+import '../../index.css';
 
 // import required modules
 import { Autoplay, Navigation } from "swiper/modules";
