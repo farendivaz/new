@@ -22,23 +22,23 @@ export default function Milestone() {
                         <h1 className="my-8 text-2xl font-bold text-center md:text-3xl lg:text-3xl xl:text-4xl text-primary-100">
                             Milestones Perusahaan
                         </h1>
-                        
+
                         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                             <SwiperSlide>
-                            <div id="mySwiper"
-                            className="flex flex-row m-4 items-center justify-center w-11/12 mx-auto cursor-pointer swiperMilestoneYear">
-                            <div className="swiper-wrapper">
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2021
-                                </h1>
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2022
-                                </h1>
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2023
-                                </h1>
-                            </div>
-                        </div>
+                                <div id="mySwiper"
+                                    className="flex flex-row m-4 items-center justify-center w-11/12 mx-auto cursor-pointer swiperMilestoneYear">
+                                    <div className="swiper-wrapper">
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2021
+                                        </h1>
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2022
+                                        </h1>
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2023
+                                        </h1>
+                                    </div>
+                                </div>
                                 <div className="flex gap-8 mx-12">
                                     <div className='w-3/5'>
                                         <img className="rounded-2xl" src="/public/tim/carousel1.jpg" alt="Image Milestone Cover" />
@@ -57,20 +57,20 @@ export default function Milestone() {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                            <div id="mySwiper"
-                            className="flex flex-row m-4 items-center justify-center w-11/12 mx-auto cursor-pointer swiperMilestoneYear">
-                            <div className="swiper-wrapper">
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2021
-                                </h1>
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2022
-                                </h1>
-                                <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
-                                    2023
-                                </h1>
-                            </div>
-                        </div>
+                                <div id="mySwiper"
+                                    className="flex flex-row m-4 items-center justify-center w-11/12 mx-auto cursor-pointer swiperMilestoneYear">
+                                    <div className="swiper-wrapper">
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2021
+                                        </h1>
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2022
+                                        </h1>
+                                        <h1 className="mx-auto font-bold text-center text-secondary1-200 name swiper-slide">
+                                            2023
+                                        </h1>
+                                    </div>
+                                </div>
                                 <div className="flex gap-8 mx-12">
                                     <div className='w-3/5'>
                                         <img className="rounded-2xl" src="/public/tim/carousel1.jpg" alt="Image Milestone Cover" />

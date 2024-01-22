@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Fitur from "../components/home/Fitur";
@@ -8,6 +9,12 @@ import Preview from "../components/home/Preview";
 import Cerita from "../components/home/Cerita";
 
 function Home() {
+  const [modal, setModal] = useState(false);
+
+  const openModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <>
       <NavBar />
@@ -17,7 +24,20 @@ function Home() {
 
       <div className="flex m-20">
         <div className="w-1/2">
-          <img src="/public/banner.jpg" alt="Banner Image" className="w-full"></img>
+          <div className="relative aspect-video w-full ">
+            <img
+              className=" aspect-video w-full rounded-2xl"
+              onClick={openModal}
+              src="https://img.youtube.com/vi/4UZrsTqkcW4/maxresdefault.jpg"
+              alt="Youtube Thumbnail"
+            />
+            <img
+              onClick={openModal}
+              className="absolute inset-0 flex items-center justify-center m-auto w-16 border-white"
+              src="/public/play.png"
+              alt="Play Button"
+            />
+          </div>
         </div>
 
         <div className="m-8">
@@ -41,6 +61,29 @@ function Home() {
             banyak fitur bermanfaat lainnya.
           </p>
         </section>
+        {modal ? (
+            <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-75">
+              <div className="rounded">
+                <div className="relative">
+                  <h1
+                    onClick={openModal}
+                    className="absolute top-0 border text-xl bg-white border-white rounded-full p-1 -right-10 text-gray-800 cursor-pointer"
+                  >
+                    ❌
+                  </h1>
+                  <iframe
+                    loading="lazy"
+                    width="800"
+                    height="500"
+                    src="https://www.youtube.com/embed/4UZrsTqkcW4"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          ) : null}
       </div>
       <Fitur />
       <Partner />
