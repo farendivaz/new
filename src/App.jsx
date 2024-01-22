@@ -5,6 +5,7 @@ import About from './pages/About';
 import News from './pages/News';
 import ContactUs from './pages/ContactUs';
 import Blog from './pages/Blog';
+import Galeri from './pages/Galeri';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/galeri" element={<Galeri />} />
         </Routes>
       </Router>
     </>

@@ -16,7 +16,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 export default function Visi() {
   return (
     <>
-      <section className='h-60 m-5 '>
+      <section className='h-60 m-5 mb-8'>
         <div className="rounded-3xl h-full p-6 mx-auto shadow-[rgba(17,_17,_26,_0.1)_0px_0px_20px] bg-white overflow-hidden">
           <Swiper
             spaceBetween={30}

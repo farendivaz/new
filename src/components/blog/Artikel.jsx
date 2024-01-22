@@ -8,7 +8,7 @@ function Artikel() {
 
                     <div className="flex-col justify-start items-start gap-3.5 flex md:w-2/3 w-full px-[30px] md:px-0">
                         <div className="self-stretch lg:py-6 flex-col justify-start items-start gap-2.5 flex text-neutral-100">
-                            <h1 className="self-stretch text-2xl sm:text-3xl lg:text-5xl break-words font-bold leading-6 lg:leading-[62.40px]">
+                            <h1 className="self-stretch font-semibold text-2xl sm:text-3xl lg:text-5xl break-words leading-6 lg:leading-[62.40px]">
                                 Kolaborasi Seru Perusahaan PT. X bersama Mitra Perusahaan
                             </h1>
                             <div className="self-stretch text-base font-semibold leading-relaxed sm:text-xl font-roboto">

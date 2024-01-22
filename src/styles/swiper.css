@@ -80,7 +80,7 @@
     position: relative;
     width: 12px; 
     height: 12px; 
-    background-color: #1573D3; 
+    background-color: #6FBCF1; 
     border-radius: 50%; 
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -91,30 +91,32 @@
     opacity: 1;
     width: 30px;
     border-radius: 10px;
+    background-color: #1573D3;
   }
 
   .fitur .mySwiper .swiper-pagination-bullet {
     position: relative;
-    width: 12px; 
-    height: 12px; 
-    background-color: #1573D3; 
-    border-radius: 50%; 
+    width: 12px;
+    height: 12px;
+    background-color: #6FBCF1; 
+    border-radius: 50%;
     opacity: 0.7;
     transition: opacity 0.2s;
     top: -5px;
-  }
-  
-  .fitur .mySwiper .swiper-pagination-bullet-active {
+}
+
+.fitur .mySwiper .swiper-pagination-bullet-active {
     opacity: 1;
     width: 30px;
     border-radius: 10px;
-  }
+    background-color: #1573D3;
+}
 
   .sorotan .mySwiper .swiper-pagination-bullet  {
     position: relative;
     width: 12px; 
     height: 12px; 
-    background-color: #1573D3; 
+    background-color: #6FBCF1; 
     border-radius: 50%; 
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -125,6 +127,7 @@
     opacity: 1;
     width: 30px;
     border-radius: 10px;
+    background-color: #1573D3;
   }
 
   #home:hover,

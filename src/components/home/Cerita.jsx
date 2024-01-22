@@ -96,7 +96,14 @@ const Cerita = () => {
                         </div>
                     </div>
                 </section>
+                <a
+                    data-modal="modal-2"
+                    className="px-8 py-1 mx-auto my-5 text-base font-semibold transition-all duration-300 border rounded-full sm:px-10 show-modal text-primary-200 border-primary-200 hover:bg-primary-200 hover:text-white hover:cursor-pointer"
+                >
+                    Selengkapnya
+                </a>
             </div>
+
         </>
     )
 }

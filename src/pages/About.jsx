@@ -13,7 +13,7 @@ const About = () => {
         <>
       <NavBar />
         <div className="bg-neutral-500">
-            <div className=" mx-28">
+            <div className="py-16 mx-28">
                 <Deskripsi />
                 <Visi />
                 <Milestone />

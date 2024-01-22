@@ -163,7 +163,7 @@ export default function Preview() {
       <section
         data-aos="fade-up"
         data-aos-delay="250"
-        className="flex p-8 items-center justify-center w-full"
+        className="flex pt-8 pb-4 items-center justify-center w-full"
       >
         <a
           href="/myqrcode.mobi/2fe2e6f0"

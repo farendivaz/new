@@ -1,5 +1,5 @@
 
-const Cerita = () => {
+const KumpulanCerita = () => {
     return (
         <>
             <div
@@ -99,4 +99,4 @@ const Cerita = () => {
     )
 }
 
-export default Cerita
+export default KumpulanCerita
