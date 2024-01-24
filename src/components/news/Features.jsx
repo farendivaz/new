@@ -151,8 +151,8 @@ const Features = () => {
                         ))}
                     </>
                 )}
-                <div onClick={handleClick} className="flex justify-center my-4">
-                    <button className="px-8 py-1 mx-auto my-5 text-base font-semibold transition-all duration-300 border rounded-full sm:px-10 show-modal text-primary-200 border-primary-200 hover:bg-primary-200 hover:text-white hover:cursor-pointer">
+                <div className="flex justify-center my-4">
+                    <button onClick={handleClick} className="px-8 py-1 mx-auto my-5 text-base font-semibold transition-all duration-300 border rounded-full sm:px-10 show-modal text-primary-200 border-primary-200 hover:bg-primary-200 hover:text-white hover:cursor-pointer">
                         Selengkapnya
                     </button>
                 </div>

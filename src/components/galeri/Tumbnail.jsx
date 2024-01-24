@@ -1,6 +1,10 @@
-import React from 'react'
+import { useState } from "react"
+import PopupGaleri from './PopupGaleri'
 
 const Thumbnail = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <>
             <section id="container" className="w-full lg:py-2.5 flex-col mt-5 items-center gap-12 flex">
@@ -30,7 +34,7 @@ const Thumbnail = () => {
 
             <div data-aos="fade-up" data-aos-delay="500"
                 className="grid grid-cols-1 px-28 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-[24px] md:mx-0 lg:mx-0">
-                <div onclick="showModalPreviewImage(0)"
+                <div onClick={() => {setShowModal(true);}}
                     className="relative flex justify-center overflow-hidden bg-gray-400 aspect-video rounded-3xl">
                     <img className="object-contain w-full h-full" src="https://demo.fitaja.id//storage/galery-images/NWpkTIdlt9fZCi4D4VvFdKYxnVM2rFK052okcMyZ.jpg"
                         alt="" />
@@ -39,7 +43,7 @@ const Thumbnail = () => {
                         <p className="overflow-hidden text-center break-words"></p>
                     </div>
                 </div>
-                <div onclick="showModalPreviewImage(1)"
+                <div  onClick={() => {setShowModal(true);}}
                     className="relative flex justify-center overflow-hidden bg-gray-400 aspect-video rounded-3xl">
                     <img className="object-contain w-full h-full" src="https://demo.fitaja.id//storage/galery-images/Cg5sQZfZqxAE3IwYRsi8bOhHZ95nv8vZnRWgZ3RD.jpg"
                         alt="" />
@@ -48,7 +52,7 @@ const Thumbnail = () => {
                         <p className="overflow-hidden text-center break-words"></p>
                     </div>
                 </div>
-                <div onclick="showModalPreviewImage(2)"
+                <div  onClick={() => {setShowModal(true);}}
                     className="relative flex justify-center overflow-hidden bg-gray-400 aspect-video rounded-3xl">
                     <img className="object-contain w-full h-full" src="https://demo.fitaja.id//storage/galery-images/xER5MnpEOhxAOrkZX5VJsYtEEabzG3GisE9UHWoK.png"
                         alt="" />
@@ -58,6 +62,8 @@ const Thumbnail = () => {
                     </div>
                 </div>
             </div>
+
+            <PopupGaleri isShow={showModal} isHide={() => setShowModal(false)} />
         </>
     )
 }

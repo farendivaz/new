@@ -10,7 +10,7 @@ import '../../index.css';
 
 const GaleriLainnya = () => {
     return (
-        <div className='py-8'>
+        <div className='py-12'>
             <h1 data-aos="fade-up" data-aos-delay="250" className="text-3xl font-semibold px-20">
                 Galeri Lainnya
             </h1>

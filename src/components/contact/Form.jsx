@@ -21,13 +21,25 @@ const Form = () => {
     const [showCategory, setShowCategory] = useState(false);
     const [category, setCategory] = useState("");
 
+    const handleShowCategory = () => {
+        setShowCategory(!showCategory);
+        if (!showCategory) {
+            document.addEventListener('click', handleDocumentClick);
+        } else {
+            document.removeEventListener('click', handleDocumentClick);
+        }
+    };
+
+    const handleDocumentClick = (event) => {
+        if (event.target.id !== 'custom-dropdown') {
+            setShowCategory(false);
+            document.removeEventListener('click', handleDocumentClick);
+        }
+    };
+
     const handleShowInfo = () => {
         setShowInfo(!showInfo);
     };
-
-    const handleShowCategory = () => {
-        setShowCategory(!showCategory);
-    }
 
     const handleCategory = (e) => {
         setCategory(e.target.innerText);
@@ -35,7 +47,7 @@ const Form = () => {
     };
 
     return (
-        <div class="mt-8 overflow-hidden md:py-16 lg:pt-16 px-14 md:px-28 lg:px-28">
+        <div className="mt-8 overflow-hidden md:py-16 lg:pt-16 px-14 md:px-28 lg:px-28">
             <div
                 id="form-question"
                 className="flex flex-col-reverse items-center gap-8 md:items-end md:justify-between md:flex-row align-self-stretch"
@@ -140,13 +152,14 @@ const Form = () => {
                                         </div>
                                         <div
                                             onClick={handleShowInfo}
-                                            className="absolute closeModal right-1 top-1 shrink-0 hover:cursor-pointer hover:bg-gray-300 hover:rounded-full"
+                                            className="absolute closeModal right-1 top-1 shrink-0 hover:cursor-pointer hover:bg-gray-400 hover:rounded-full"
                                         >
-                                            <div className="w-10 h-10 md:h-10 ">
+                                            <div className="w-10 h-10 md:h-10">
                                                 <svg
                                                     viewBox="0 0 50 50"
                                                     fill="none"
                                                     xmlns="http://www.w3.org/2000/svg"
+                                                    style={{ filter: "grayscale(0%)", transition: "filter 0.3s ease-in-out" }}
                                                 >
                                                     <path
                                                         d="M17.8594 17.8572L32.1451 32.1429M32.1451 17.8572L17.8594 32.1429"
@@ -162,7 +175,7 @@ const Form = () => {
                                 </div>
                                 <a
                                     onClick={handleShowInfo}
-                                    className="absolute buttonSvg right-2 bottom-3 hover:cursor-pointer"
+                                    className="absolute buttonSvg right-4 bottom-4 hover:cursor-pointer"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -193,12 +206,12 @@ const Form = () => {
                                     </p>
                                 </div>
                                 <svg
-                                    className={`absolute right-[10px] top-1 -z-10 ${showCategory ? "rotate-180" : ""
+                                    className={`absolute right-[16px] top-0 -z-10 ${showCategory ? "rotate-180" : ""
                                         }`}
                                     id="arrow-icon"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width={20}
-                                    height={20}
+                                    width={25}
+                                    height={25}
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
                                 >
@@ -211,13 +224,13 @@ const Form = () => {
                                 <div
                                     id="custom-options"
                                     className={`${showCategory ? "" : "hidden"
-                                        } absolute text-center w-64 rounded-2xl py-6 px-2 bg-neutral-500 mt-1 -right-5 xsm:right-0 shadow-md`}
+                                        } absolute text-center w-64 top-7 rounded-2xl py-6 px-2 bg-neutral-500 mt-1 -right-5 xsm:right-0 shadow-md`}
                                 >
-                                    <div class="flex flex-col items-center justify-center gap-2 ">
+                                    <div className="flex flex-col items-center justify-center gap-2">
                                         {categoryList.map((category) => (
                                             <div
                                                 onClick={handleCategory}
-                                                class=" w-3/4 px-6 py-2 text-sm cursor-pointer font-roboto text-info-200 hover:bg-info-200 hover:rounded-md hover:text-white"
+                                                className=" w-3/4 px-6 py-2 text-sm cursor-pointer font-roboto text-info-200 hover:bg-info-200 hover:rounded-md hover:text-white"
                                             >
                                                 {category.name}
                                             </div>
