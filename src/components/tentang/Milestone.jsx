@@ -11,7 +11,7 @@ import '../../styles/swiper.css';
 import '../../index.css';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 export default function Milestone() {
     return (

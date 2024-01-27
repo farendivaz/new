@@ -117,3 +117,32 @@ header {
   transition: all;
 }
 
+
+#prevOtherGalleryPopup::after,
+	#nextOtherGalleryPopup::after {
+		font-size: 28px;
+	}
+
+	@media (max-width: 768px) {
+
+		#prevOtherGalleryPopup::after,
+		#nextOtherGalleryPopup::after {
+			font-size: 16px;
+		}
+
+		#prevOtherGalleryPopup,
+		#nextOtherGalleryPopup {
+			box-sizing: border-box;
+			color: white;
+			border-radius: 100%;
+			background-color: #0093AD;
+		}
+	}
+
+	#prevOtherGalleryPopup:hover,
+	#nextOtherGalleryPopup:hover {
+		box-sizing: border-box;
+		color: white;
+		border-radius: 100%;
+		background-color: #0093AD;
+	}
