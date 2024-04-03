@@ -4,11 +4,13 @@ import NavBar from '../components/NavBar'
 import KumpulanCerita from '../components/news/KumpulanCerita'
 import KumpulanGaleri from '../components/news/KumpulanGaleri'
 import KumpulanVideo from '../components/news/KumpulanVideo'
+import Kategori from '../components/news/Kategori'
 
 const News = () => {
     return (
         <>
         <NavBar />
+        <Kategori/>
             <KumpulanCerita/>
             {/* <KumpulanGaleri/> */}
             {/* <KumpulanVideo/> */}

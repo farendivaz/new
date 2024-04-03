@@ -13,7 +13,7 @@ const Sorotan = () => {
     return (
         <>
             <section className='sorotan'>
-                <div className='mx-28 mt-28 mb-6'>
+                <div className='mx-28 mt-8 mb-6'>
                     <h1 className="text-2xl mb-8 font-semibold text-center md:text-3xl lg:text-3xl xl:text-4xl">
                         Berita!
                     </h1>
