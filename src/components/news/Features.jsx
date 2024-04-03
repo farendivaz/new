@@ -1,5 +1,5 @@
 import { useState } from "react";
-import VideoPopup from "./VideoPopup";
+import VideoPopup from "./KumpulanVideo";
 import KumpulanCerita from "./KumpulanCerita";
 import KumpulanGaleri from "./KumpulanGaleri";
 
@@ -26,23 +26,24 @@ const Features = () => {
                     (_, index) => prevPosts.length + index + 1
                 ),
             ]);
-        } else if (tab === "video") {
-            setVideoPopup((prevVideo) => [
-                ...prevVideo,
-                ...Array.from(
-                    { length: 2 },
-                    (_, index) => prevVideo.length + index + 1
-                ),
-            ]);
-        } else if (tab === "gallery") {
-            setGalleryPhotos((prevGallery) => [
-                ...prevGallery,
-                ...Array.from(
-                    { length: 2 },
-                    (_, index) => prevGallery.length + index + 1
-                ),
-            ]);
         }
+        // } else if (tab === "video") {
+        //     setVideoPopup((prevVideo) => [
+        //         ...prevVideo,
+        //         ...Array.from(
+        //             { length: 2 },
+        //             (_, index) => prevVideo.length + index + 1
+        //         ),
+        //     ]);
+        // } else if (tab === "gallery") {
+        //     setGalleryPhotos((prevGallery) => [
+        //         ...prevGallery,
+        //         ...Array.from(
+        //             { length: 2 },
+        //             (_, index) => prevGallery.length + index + 1
+        //         ),
+        //     ]);
+        // }
     };
 
     return (

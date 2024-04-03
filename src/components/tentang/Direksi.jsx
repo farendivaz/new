@@ -7,25 +7,19 @@ function Direksi() {
     const data = [
         {
             id: 1,
-            url: "/3.jpeg",
-            name: "Alexander Grahambel",
-            topicList: 100,
-            shortName: "CEO",
+            url: "/public/tim/managing-director.jpg",
+            name: "Danang Rizki Ginanjar",
+            topicList: 'Managing Director',
+            shortName: "Managing Director",
         },
         {
             id: 2,
-            url: "/2.jpeg",
-            name: "Coding Course",
-            topicList: 120,
-            shortName: "CTO",
+            url: "/public/tim/director.jpg",
+            name: "Aris Bachtiar",
+            topicList: 'Director',
+            shortName: "Director",
         },
-        {
-            id: 3,
-            url: "/1.jpeg",
-            name: "Business Course",
-            topicList: 150,
-            shortName: "SEVP",
-        },
+
     ];
 
     const handleHover = (id) => {
@@ -43,51 +37,49 @@ function Direksi() {
     };
 
     return (
-        <div>
-            <AppContainer>
-                <Wrapper>
-                    <ContainerWrapper  className="bg-neutral-500">
-                        <First>
-                            <TextWrapper>
-                            <Text className="text-6xl">Dewan</Text>
-                            <Text className="text-6xl">Direksi.</Text>
-                            </TextWrapper>
-                        </First>
-                        <Container className="main">
-                            {data.map((o) => (
-                                <ItemWrapper key={o.id}
-                                    onMouseOver={() => handleHover(o.id)}
-                                    onMouseLeave={() => handleHoverLeave(o.id)}
+        <>
+        <AppContainer className="mx-auto rounded-3xl">
+            <Wrapper className="flex items-center justify-center min-h-screen">
+                <ContainerWrapper className="">
+                    <First>
+                        <TextWrapper>
+                        <Text className="text-[52px] text-primary-100 ml-6">Direksi</Text>
+                        </TextWrapper>
+                    </First>
+                    <Container className="main px-10">
+                        {data.map((o) => (
+                            <ItemWrapper key={o.id}
+                                onMouseOver={() => handleHover(o.id)}
+                                onMouseLeave={() => handleHoverLeave(o.id)}
+                                isActive={o.id === activeItem}
+                            >
+                                <Item
+                                    style={{ backgroundImage: `url(${o.url})` }}
                                     isActive={o.id === activeItem}
                                 >
-                                    <Item
-                                        style={{ backgroundImage: `url(${o.url})` }}
+                                    <ContentWrap1
                                         isActive={o.id === activeItem}
+                                        isFirst={o.id === 1}
                                     >
-                                        <ContentWrap1
-                                            isActive={o.id === activeItem}
-                                            isFirst={o.id === 1}
-                                        >
-                                            <CourseFullname>{o.name}</CourseFullname>
-                                            <TopicListWrapper>
-                                                <TopicItems>{o.topicList}</TopicItems>
-                                                <TopicText>Topics</TopicText>
-                                            </TopicListWrapper>
-                                        </ContentWrap1>
-                                        <ContentWrap2
-                                            isActive={o.id === activeItem}
-                                            isFirst={o.id === 1}
-                                        >
-                                            <ShortName>{o.shortName}</ShortName>
-                                        </ContentWrap2>
-                                    </Item>
-                                </ItemWrapper>
-                            ))}
-                        </Container>{" "}
-                    </ContainerWrapper>
-                </Wrapper>
-            </AppContainer>
-        </div>
+                                        <CourseFullname>{o.name}</CourseFullname>
+                                        <TopicListWrapper>
+                                            <TopicItems>{o.topicList}</TopicItems>
+                                        </TopicListWrapper>
+                                    </ContentWrap1>
+                                    <ContentWrap2
+                                        isActive={o.id === activeItem}
+                                        isFirst={o.id === 1}
+                                    >
+                                        <ShortName>{o.shortName}</ShortName>
+                                    </ContentWrap2>
+                                </Item>
+                            </ItemWrapper>
+                        ))}
+                    </Container>{" "}
+                </ContainerWrapper>
+            </Wrapper>
+        </AppContainer>
+    </>
     );
 }
 
@@ -95,15 +87,16 @@ export default Direksi;
 
 const AppContainer = styled.div`
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 97%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fcfbfb;
+  justify-content: center;
 `;
 const Wrapper = styled.div`
-  width: 1400px;
+  width: 1200px;
 `;
 
 const ContainerWrapper = styled.div`
@@ -122,8 +115,8 @@ const Container = styled.div`
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
-  min-width: 600px;
-  max-width: 930px;
+  min-width: 540px;
+  max-width: 800px;
   width: calc(100% - 100px);
   height: 600px;
 `;
@@ -169,7 +162,7 @@ const ContentWrap1 = styled.div`
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  padding: 0 40px;
+  padding: 0 40px 0 30px;
   transition: all 0.6s ease;
   opacity: ${({ isActive }) => (isActive ? "1" : "0")};
 `;
@@ -181,27 +174,29 @@ const CourseFullname = styled.div`
   word-break: keep-all;
   height: 100%;
   width: 10vw;
+  margin-bottom: 80px;
 `;
 const TopicListWrapper = styled.div`
   text-align: center;
   color: #fff;
 `;
 const TopicItems = styled.div`
-  font-size: 52px;
-  line-height: 1;
-`;
-const TopicText = styled.div`
-  text-transform: uppercase;
+  font-size: 34px;
+  color: #fff;
+  font-weight: 500;
+  word-break: keep-all;
+  height: 100%;
+  width: 10vw;
 `;
 
 const ContentWrap2 = styled.div`
-  width: 120px;
+  width: 100px;
   height: 120px;
   background-color: #1e1e2f;
   color: #fff;
   position: absolute;
   left: 0;
-  bottom: 60px;
+  bottom: 80px;
   z-index: 1;
   transition: all 0.6s ease;
   opacity: ${({ isActive }) => (isActive ? "0" : "1")};
@@ -210,4 +205,5 @@ const ContentWrap2 = styled.div`
 const ShortName = styled.div`
   font-size: 34px;
   transform: rotate(-90deg);
+  font-weight: 500;
 `;

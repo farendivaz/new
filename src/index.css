@@ -4,6 +4,7 @@
 
 body {
   font-family: "Poppins", cursive;
+  background-color: white;
 }
 
 header {
@@ -81,6 +82,9 @@ header {
     border-radius: 25px;
   }
 
+  .preview{
+    background-color: rgb(7,159,247); background: linear-gradient(50deg, rgba(7,159,247,1) 0%, rgba(105,216,252,1) 40%, rgba(21,115,211,1) 100%);
+  }
   
 .menu-list {
   width: 100%;

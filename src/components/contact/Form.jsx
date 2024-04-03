@@ -61,7 +61,7 @@ const Form = () => {
                         <h3 className="pb-4 text-3xl text-black md:text-4xl lg:text-4xl">
                             Punya Pertanyaan?
                         </h3>
-                        <h4 className="text-xl font-semibold md:text-3xl lg:text-3xl text-primary-100">
+                        <h4 className="text-xl font-medium md:text-3xl lg:text-3xl text-primary-100">
                             Lengkapi formulir pertanyaan di bawah ini
                         </h4>
                     </div>

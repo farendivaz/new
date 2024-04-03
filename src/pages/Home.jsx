@@ -7,6 +7,7 @@ import Partner2 from "../components/home/Partner2";
 import Review from "../components/home/Review";
 import Preview from "../components/home/Preview";
 import Cerita from "../components/home/Cerita";
+import Banner from "../components/home/Banner";
 
 function Home() {
   const [modal, setModal] = useState(false);
@@ -18,17 +19,14 @@ function Home() {
   return (
     <>
       <NavBar />
-      <div>
-        <img src="/public/banner.jpg"></img>
-      </div>
-
-      <div className="flex m-20">
+      <Banner />
+      <div className="flex m-24">
         <div className="w-1/2">
           <div className="relative aspect-video w-full ">
             <img
               className=" aspect-video w-full rounded-2xl"
               onClick={openModal}
-              src="https://img.youtube.com/vi/4UZrsTqkcW4/maxresdefault.jpg"
+              src="/public/ytb.png"
               alt="Youtube Thumbnail"
             />
             <img
@@ -45,7 +43,7 @@ function Home() {
         </div>
         <section className="flex flex-col items-center justify-center w-1/2">
           <h2
-            className="pb-4 font-semibold text-center md:text-3xl lg:text-left xl:text-4xl"
+            className="pb-4 font-semibold text-center md:text-3xl lg:text-left xl:text-4xl text-primary-100"
           >
             Layanan Kesehatan Digital Terintegrasi untuk Indonesia Sehat
           </h2>
@@ -62,28 +60,28 @@ function Home() {
           </p>
         </section>
         {modal ? (
-            <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-75">
-              <div className="rounded">
-                <div className="relative">
-                  <h1
-                    onClick={openModal}
-                    className="absolute top-0 border text-xl bg-white border-white rounded-full p-1 -right-10 text-gray-800 cursor-pointer"
-                  >
-                    ❌
-                  </h1>
-                  <iframe
-                    loading="lazy"
-                    width="800"
-                    height="500"
-                    src="https://www.youtube.com/embed/4UZrsTqkcW4"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-75">
+            <div className="rounded">
+              <div className="relative">
+                <h1
+                  onClick={openModal}
+                  className="absolute top-0 border text-xl bg-white border-white rounded-full p-1 -right-10 text-gray-800 cursor-pointer"
+                >
+                  ❌
+                </h1>
+                <iframe
+                  loading="lazy"
+                  width="1200"
+                  height="600"
+                  src="https://www.youtube.com/embed/mTNNR4Ikwv4?si=DWpoNI9TqDKYpMqW?autoplay=1"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
-          ) : null}
+          </div>
+        ) : null}
       </div>
       <Fitur />
       <Partner />

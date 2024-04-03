@@ -2,25 +2,26 @@ import { useState } from "react";
 import styled from "styled-components";
 
 function Komisaris() {
-    const [activeItem, setActiveItem] = useState(1);
+  const [activeItem, setActiveItem] = useState(1);
 
-    const data = [
-        {
-            id: 1,
-            url: "/3.jpeg",
-            name: "Writing Course",
-            topicList: 100,
-            shortName: "Komisaris Utama",
-        },
-        {
-            id: 2,
-            url: "/2.jpeg",
-            name: "Coding Course",
-            topicList: 120,
-            shortName: "Komisaris",
-        },
+  const data = [
+      {
+          id: 1,
+          url: "/public/tim/komisaris-utama.jpg",
+          name: "Bugi Riagandhy",
+          topicList: 'Komisaris Utama',
+          shortName: "Komisaris Utama",
+      },
+      {
+          id: 2,
+          url: "/public/tim/komisaris.jpg",
+          name: "Dinoor Susatijo",
+          topicList: 'Komisaris',
+          shortName: "Komisaris",
+      },
 
-    ];
+  ];
+
 
     const handleHover = (id) => {
         if (activeItem === id) {
@@ -38,13 +39,13 @@ function Komisaris() {
 
     return (
         <>
-        <AppContainer className="mx-auto">
+        <AppContainer className="mx-auto rounded-3xl mb-8">
             <Wrapper className="flex items-center justify-center min-h-screen">
-                <ContainerWrapper className="bg-neutral-500">
+                <ContainerWrapper className="">
                     <First>
                         <TextWrapper>
-                            <Text className="text-6xl">Dewan</Text>
-                            <Text className="text-6xl">Komisaris.</Text>
+                        <Text className="text-[52px] text-primary-100 ml-6 leading-tight">Dewan</Text>
+                            <Text className="text-[52px] text-primary-100 ml-6 leading-tight">Komisaris</Text>
                         </TextWrapper>
                     </First>
                     <Container className="main px-10">
@@ -65,7 +66,6 @@ function Komisaris() {
                                         <CourseFullname>{o.name}</CourseFullname>
                                         <TopicListWrapper>
                                             <TopicItems>{o.topicList}</TopicItems>
-                                            <TopicText>Topics</TopicText>
                                         </TopicListWrapper>
                                     </ContentWrap1>
                                     <ContentWrap2
@@ -89,15 +89,16 @@ export default Komisaris;
 
 const AppContainer = styled.div`
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 97%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fcfbfb;
+  justify-content: center;
 `;
 const Wrapper = styled.div`
-  width: 1400px;
+  width: 1200px;
 `;
 
 const ContainerWrapper = styled.div`
@@ -116,8 +117,8 @@ const Container = styled.div`
   flex-direction: row;
   align-items: stretch;
   overflow: hidden;
-  min-width: 600px;
-  max-width: 930px;
+  min-width: 540px;
+  max-width: 800px;
   width: calc(100% - 100px);
   height: 600px;
 `;
@@ -163,7 +164,7 @@ const ContentWrap1 = styled.div`
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  padding: 0 40px;
+  padding: 0 40px 0 30px;
   transition: all 0.6s ease;
   opacity: ${({ isActive }) => (isActive ? "1" : "0")};
 `;
@@ -181,21 +182,22 @@ const TopicListWrapper = styled.div`
   color: #fff;
 `;
 const TopicItems = styled.div`
-  font-size: 52px;
-  line-height: 1;
-`;
-const TopicText = styled.div`
-  text-transform: uppercase;
+  font-size: 34px;
+  color: #fff;
+  font-weight: 500;
+  word-break: keep-all;
+  height: 100%;
+  width: 10vw;
 `;
 
 const ContentWrap2 = styled.div`
-  width: 120px;
+  width: 100px;
   height: 120px;
   background-color: #1e1e2f;
   color: #fff;
   position: absolute;
   left: 0;
-  bottom: 60px;
+  bottom: 80px;
   z-index: 1;
   transition: all 0.6s ease;
   opacity: ${({ isActive }) => (isActive ? "0" : "1")};
@@ -204,4 +206,5 @@ const ContentWrap2 = styled.div`
 const ShortName = styled.div`
   font-size: 34px;
   transform: rotate(-90deg);
+  font-weight: 500;
 `;

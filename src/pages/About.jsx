@@ -1,32 +1,38 @@
-import Carouseltim from "../components/tentang/Carouseltim"
-import Deskripsi from "../components/tentang/Deskripsi"
-import Direksi from "../components/tentang/Direksi"
-import Komisaris from "../components/tentang/Komisaris"
-import Visi from "../components/tentang/Visi"
-import Vpmanager from "../components/tentang/Vpmanager"
-import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
+import Deskripsi from "../components/tentang/Deskripsi"
+import Visi from "../components/tentang/Visi"
 import Milestone from "../components/tentang/Milestone"
+import Komisaris from "../components/tentang/Komisaris"
+import Direksi from "../components/tentang/Direksi"
+import Vpmanager from "../components/tentang/Vpmanager"
+import Carouseltim from "../components/tentang/Carouseltim"
+import Footer from "../components/Footer"
 
 const About = () => {
-    return (
-        <>
+  return (
+    <>
       <NavBar />
-        <div className="bg-neutral-500">
-            <div className="py-16 mx-28">
-                <Deskripsi />
-                <Visi />
-                <Milestone />
-                <Komisaris />
-                <Direksi />
-                <Vpmanager />
-                <Carouseltim />
-            </div>
+      <div className="relative">
+        <img src="/public/page/frame.png" className="w-full mt-16 shadow-lg" alt="Frame Image" />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white font-semibold">
+          <h2 className="text-[50px] font-bold text-primary-200">Tentang</h2>
         </div>
-      <Footer />
-        </>
+      </div>
 
-    )
+      <div className="bg-primary-200 mb-20 mx-20 rounded-bl-[44px] rounded-br-[44px]">
+        <div className="py-4 mx-28">
+          <Deskripsi />
+          <Visi />
+          <Milestone />
+          <Komisaris />
+          <Direksi />
+          <Vpmanager />
+          <Carouseltim />
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
 }
 
 export default About

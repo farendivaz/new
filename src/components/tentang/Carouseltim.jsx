@@ -7,35 +7,42 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 export default function Carouseltim() {
     return (
-        <div className='fitur mt-20 bg-neutral-500'>
+        <div className='fitur my-12'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
+                slidesPerView={1} 
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
                 className="mySwiper aspect-video w-full rounded-3xl bg-black"
+                style={{ height: '680px' }}
             >
                 <SwiperSlide>
                     <section className='h-full w-full'>
-                        <img className='rounded-3xl' src='/public/tim/carousel5.jpg' alt="Carousel Image 1" />
+                        <img className='rounded-3xl' src='/public/tim/3.png' alt="Carousel Image 1" />
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
                     <section className='h-full w-full'>
-                        <img className='rounded-3xl' src='/public/tim/carousel2.jpg' alt="Carousel Image 2" />
+                        <img className='rounded-3xl' src='/public/tim/1.png' alt="Carousel Image 2" />
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
                     <section className='h-full w-full'>
-                        <img className='rounded-3xl' src='/public/tim/carousel3.jpg' alt="Carousel Image 3" />
+                        <img className='rounded-3xl' src='/public/tim/2.png' alt="Carousel Image 3" />
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
                     <section className='h-full w-full'>
-                        <img className='rounded-3xl' src='/public/tim/carousel4.jpg' alt="Carousel Image 4" />
+                        <img className='rounded-3xl' src='/public/tim/5.png' alt="Carousel Image 3" />
+                    </section>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <section className='h-full w-full'>
+                        <img className='rounded-3xl' src='/public/tim/4.png' alt="Carousel Image 4" />
                     </section>
                 </SwiperSlide>
             </Swiper>

@@ -8,11 +8,16 @@ export default function PopUpReview(props) {
                         className="flex flex-col items-center w-11/12 max-w-lg max-h-[400px] mx-auto shadow-lg lg:w-2/3 lg:h-1/2 lg:max-w-[1200px] lg:max-h-[350px] xl:max-h-[400px] 2xl:max-h-[600px] rounded-2xl backdrop-blur-xl bg-white/50">
                         <div className="flex items-center justify-between w-full gap-1 mx-auto">
                             <div className="flex items-center justify-end w-[90%] mx-auto">
-                                <img className="w-1/4 my-4 ml-4 rounded-full md:w-1/6 md:ml-8" src="https://demo.fitaja.id//storage/testimonies/fVF4q7efe1R6e5ub34ZUXZHEY2oWoJ7tRy1Nd274.png"
-                                    alt="PERSON"></img>
-                                <h1
-                                    className="flex items-center justify-start w-3/4 pl-4 my-auto text-xl font-medium text-center md:w-5/6 md:text-2xl name-modal">
-                                    Doe John</h1>
+                                <img className="w-1/4 my-4 ml-4 rounded-full md:w-1/6 md:ml-8" src="https://demo.fitaja.id//storage/testimonies/HErLgTk8r1dQltFPCjxeAMgHCzS3AL7RZxx7X84v.jpg" alt="PERSON" />
+                                <div className="flex items-center justify-end w-3/4 pl-8 my-auto text-xl font-medium text-center md:w-5/6 md:text-2xl name-modal">
+                                    <h1>John Doe</h1>
+                                    <p className="text-xl text-bold flex justify-end items-center ml-auto">
+                                        Rating 4.8
+                                        <div className="w-8 ml-1">
+                                            <img src="/public/star.png" alt="Star" />
+                                        </div>
+                                    </p>
+                                </div>
                             </div>
                             <div onClick={props.isHide} className="flex self-start justify-end w-[10%] mx-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +28,8 @@ export default function PopUpReview(props) {
                                 </svg>
                             </div>
                         </div>
-                        <p className="w-11/12 pb-8 mx-auto text-left break-words lg:pb-4 lg:text-lg">
-                            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+                        <p className="w-11/12 pt-4 pb-8 mx-auto text-left break-words lg:pb-4 lg:text-lg">
+                        Aplikasi FitAja! sangat membantu saya dalam keperluan klaim biaya perawatan kesehatan. Melalui fitur FitClaim, saya tidak perlu repot-repot membawa dokumen fisik ke kantor cabang Asuransi saya. Tinggal foto dokumen-dokumen yang diperlukan, proses klaim sudah bisa dijalankan. Fitur FitTele pun tidak kalah membantu saat saya membutuhkan konsultasi darurat waktu malam hari, tinggal klik diaplikasi langsung terhubung dengan dokter dan dapat resep obat.
                         </p>
                     </div>
                 </div>

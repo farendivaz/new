@@ -14,12 +14,12 @@ import { Autoplay, Navigation } from "swiper/modules";
 export default function Preview() {
   return (
     <>
-      <section>
-        <div className="judul">
-          <h2 className="text-center m-auto pt-10 pb-6 font-semibold md:text-3xl xl:text-4xl">
+    <div className="judul">
+          <h2 className="text-center m-auto pt-10 pb-8 font-semibold md:text-3xl xl:text-4xl">
             Preview Aplikasi!
           </h2>
         </div>
+      <section className="preview">
         <Swiper
           loop={true}
           spaceBetween={10}
@@ -51,7 +51,7 @@ export default function Preview() {
           }}
           navigation={false}
           modules={[Autoplay, Navigation]}
-          className="mySwiper p-8"
+          className="mySwiper p-6"
         >
           <div
             id="iphone"
@@ -158,20 +158,19 @@ export default function Preview() {
             </div>
           </div>
         </Swiper>
-      </section>
-
-      <section
-        data-aos="fade-up"
-        data-aos-delay="250"
-        className="flex pt-8 pb-4 items-center justify-center w-full"
-      >
-        <a
-          href="/myqrcode.mobi/2fe2e6f0"
-          target="_blank"
-          className="px-10 py-2 mx-auto font-semibold text-center transition-all duration-300 bg-white border text-primary-200 rounded-3xl border-primary-200 hover:bg-primary-200 hover:text-white"
+        <div
+          data-aos="fade-up"
+          data-aos-delay="250"
+          className="flex pt-6 pb-8 items-center justify-center w-full"
         >
-          Download Sekarang!
-        </a>
+          <a
+            href="/myqrcode.mobi/2fe2e6f0"
+            target="_blank"
+            className="px-10 py-2 text-base mx-auto font-semibold text-center transition-all duration-300 bg-white border text-primary-200 rounded-3xl border-primary-200 hover:bg-primary-200 hover:text-white"
+          >
+            Download Sekarang!
+          </a>
+        </div>
       </section>
     </>
   );

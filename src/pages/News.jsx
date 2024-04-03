@@ -1,15 +1,17 @@
 import React from 'react'
-import Sorotan from '../components/news/Sorotan'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import Features from '../components/news/Features'
+import KumpulanCerita from '../components/news/KumpulanCerita'
+import KumpulanGaleri from '../components/news/KumpulanGaleri'
+import KumpulanVideo from '../components/news/KumpulanVideo'
 
 const News = () => {
     return (
         <>
         <NavBar />
-            <Sorotan />
-            <Features/>
+            <KumpulanCerita/>
+            {/* <KumpulanGaleri/> */}
+            {/* <KumpulanVideo/> */}
             <Footer/>
         </>
     )
