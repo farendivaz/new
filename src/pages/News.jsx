@@ -1,22 +1,18 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
-import KumpulanCerita from '../components/news/KumpulanCerita'
-import KumpulanGaleri from '../components/news/KumpulanGaleri'
-import KumpulanVideo from '../components/news/KumpulanVideo'
-import Kategori from '../components/news/Kategori'
+import React from "react";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+import KumpulanCerita from "../components/news/KumpulanCerita";
+import Features from "../components/news/Features";
 
 const News = () => {
-    return (
-        <>
-        <NavBar />
-        <Kategori/>
-            <KumpulanCerita/>
-            {/* <KumpulanGaleri/> */}
-            {/* <KumpulanVideo/> */}
-            <Footer/>
-        </>
-    )
-}
+  return (
+    <>
+      <NavBar />
+      <KumpulanCerita />
+      <Features />
+      <Footer />
+    </>
+  );
+};
 
-export default News
+export default News;
