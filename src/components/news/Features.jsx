@@ -3,6 +3,9 @@ import { blogPosts, galleries, videos } from "../../data";
 import ArticleCard from "../blog/ArticleCard";
 import GalleryCard from "../galeri/GalleryCard";
 import KumpulanVideo from "./KumpulanVideo";
+import Sorotan from "./Sorotan";
+import SorotanGaleri from "./SorotanGaleri";
+import SorotanVideo from "./SorotanVideo";
 
 const Features = () => {
   const [tab, setTab] = useState("blog");
@@ -106,6 +109,7 @@ const Features = () => {
 
         {tab === "blog" && (
           <>
+            <Sorotan />
             <h1
               data-aos="fade-up"
               data-aos-delay="250"
@@ -137,6 +141,7 @@ const Features = () => {
 
         {tab === "gallery" && (
           <>
+            <SorotanGaleri />
             <h1
               data-aos="fade-up"
               data-aos-delay="250"
@@ -167,6 +172,7 @@ const Features = () => {
         )}
         {tab === "video" && (
           <>
+            <SorotanVideo />
             <h1
               data-aos="fade-up"
               data-aos-delay="250"

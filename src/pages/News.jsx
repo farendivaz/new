@@ -8,7 +8,7 @@ const News = () => {
   return (
     <>
       <NavBar />
-      <KumpulanCerita />
+      {/* <KumpulanCerita /> */}
       <Features />
       <Footer />
     </>
