@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { blogPosts, galleries, videos } from "../../data";
 import ArticleCard from "../blog/ArticleCard";
 import GalleryCard from "../galeri/GalleryCard";
-import KumpulanVideo from "./KumpulanVideo";
 import Sorotan from "./Sorotan";
 import SorotanGaleri from "./SorotanGaleri";
 import SorotanVideo from "./SorotanVideo";
+import VideoCard from "./VideoCard";
 
 const Features = () => {
   const [tab, setTab] = useState("blog");
@@ -14,10 +14,62 @@ const Features = () => {
   const [blogPage, setBlogPage] = useState(1);
   const [galleryPage, setGalleryPage] = useState(1);
   const [videoPage, setVideoPage] = useState(1);
+  const [orderBy, setOrderBy] = useState("latest");
 
-  const [blogPostsToShow, setBlogPostsToShow] = useState(blogPosts.slice(0, 6));
-  const [galleriesToShow, setGalleriesToShow] = useState(galleries.slice(0, 6));
-  const [videosToShow, setVideosToShow] = useState(videos.slice(0, 6));
+  const [blogPostsToShow, setBlogPostsToShow] = useState(() =>
+    sortArticles(blogPosts.slice(0, 6), orderBy)
+  );
+  const [galleriesToShow, setGalleriesToShow] = useState(() =>
+    sortGalleries(galleries.slice(0, 6), orderBy)
+  );
+  const [videosToShow, setVideosToShow] = useState(() =>
+    sortVideos(videos.slice(0, 6), orderBy)
+  );
+
+  useEffect(() => {
+    setBlogPostsToShow(sortArticles(blogPosts, orderBy));
+    setBlogPage(1);
+  }, [orderBy]);
+
+  useEffect(() => {
+    setGalleriesToShow(sortGalleries(galleries, orderBy));
+    setGalleryPage(1);
+  }, [orderBy]);
+
+  useEffect(() => {
+    setVideosToShow(sortVideos(videos, orderBy));
+    setVideoPage(1);
+  }, [orderBy]);
+
+  function sortArticles(articles, orderBy) {
+    if (orderBy === "latest") {
+      return articles
+        .sort((a, b) => new Date(b.publish_date) - new Date(a.publish_date))
+        .slice(0, 6);
+    } else if (orderBy === "popular") {
+      return articles.sort((a, b) => b.viewCounts - a.viewCounts).slice(0, 6);
+    }
+  }
+
+  function sortGalleries(galleries, orderBy) {
+    if (orderBy === "latest") {
+      return galleries
+        .sort((a, b) => new Date(b.publish_date) - new Date(a.publish_date))
+        .slice(0, 6);
+    } else if (orderBy === "popular") {
+      return galleries.sort((a, b) => b.viewCounts - a.viewCounts).slice(0, 6);
+    }
+  }
+
+  function sortVideos(videos, orderBy) {
+    if (orderBy === "latest") {
+      return videos
+        .sort((a, b) => new Date(b.publish_date) - new Date(a.publish_date))
+        .slice(0, 6);
+    } else if (orderBy === "popular") {
+      return videos.sort((a, b) => b.viewCounts - a.viewCounts).slice(0, 6);
+    }
+  }
 
   const handleClick = (tab) => {
     if (tab === "blog") {
@@ -59,13 +111,21 @@ const Features = () => {
             Blog
           </button>
           <button
-            className={`focus:outline-none bg-primary-400 focus:bg-primary-200 font-semibold py-2 px-4 w-32 text-center rounded-xl text-white`}
+            className={`focus:outline-none ${
+              tab === "gallery"
+                ? "bg-primary-200 text-white"
+                : "bg-primary-400 text-white"
+            } font-semibold py-2 px-4 w-32 text-center rounded-xl`}
             onClick={() => setTab("gallery")}
           >
             Gallery
           </button>
           <button
-            className={`focus:outline-none bg-primary-400 focus:bg-primary-200 font-semibold py-2 px-4 w-32 text-center rounded-xl text-white`}
+            className={`focus:outline-none ${
+              tab === "video"
+                ? "bg-primary-200 text-white"
+                : "bg-primary-400 text-white"
+            } font-semibold py-2 px-4 w-32 text-center rounded-xl`}
             onClick={() => setTab("video")}
           >
             Video
@@ -101,6 +161,8 @@ const Features = () => {
             className="w-1/3 my-auto text-base font-semibold text-center border-2 md:my-0 md:w-1/4 text-primary-200 md:text-xl rounded-xl border-primary-200"
             id="sortArticles"
             name="orderBy"
+            value={orderBy}
+            onChange={(e) => setOrderBy(e.target.value)}
           >
             <option value="latest">Baru</option>
             <option value="popular">Populer</option>
@@ -138,7 +200,6 @@ const Features = () => {
             </div>
           </>
         )}
-
         {tab === "gallery" && (
           <>
             <SorotanGaleri />
@@ -183,19 +244,18 @@ const Features = () => {
             <div className="grid w-11/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {search ? (
                 <>
-                  {videos
+                  {videosToShow
                     .filter((video) =>
                       video.title.toLowerCase().includes(search.toLowerCase())
                     )
-                    .slice(0, 6)
                     .map((video) => (
-                      <KumpulanVideo key={video.youtubeId} video={video} />
+                      <VideoCard key={video.id} video={video} />
                     ))}
                 </>
               ) : (
                 <>
-                  {videos.slice(0, 6).map((video) => (
-                    <KumpulanVideo key={video.youtubeId} video={video} />
+                  {videosToShow.map((video) => (
+                    <VideoCard key={video.id} video={video} />
                   ))}
                 </>
               )}

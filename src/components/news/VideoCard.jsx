@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import SorotanVideo from "./SorotanVideo";
 
-const KumpulanVideo = ({ video }) => {
+const VideoCard = ({ video }) => {
   const [modal, setModal] = useState(false);
 
   const openModal = () => {
@@ -60,4 +59,4 @@ const KumpulanVideo = ({ video }) => {
   );
 };
 
-export default KumpulanVideo;
+export default VideoCard;
